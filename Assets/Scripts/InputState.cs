@@ -33,4 +33,13 @@ public class InputState : MonoBehaviour
 		state.value = value;
 
 	}
+
+	public bool GetButtonValue (Buttons key)
+	{
+		if (buttonStates.ContainsKey (key))
+			return buttonStates [key].value;
+		else
+			return false;
+	}
+
 }
